@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "node api.js && tsx watch --import ./src/observability/register-tracing.ts --import ./src/observability/apm-register.ts src/index.ts",
-    "build": "node api.js && tsc",
-    "start": "node api.js && node --import ./dist/observability/register-tracing.js --import ./dist/observability/apm-register.js dist/index.js",
+    "dev": "node init && tsx watch --import ./src/observability/register-tracing.ts --import ./src/observability/apm-register.ts src/index.ts",
+    "build": "node init && tsc",
+    "start": "node init && node --import ./dist/observability/register-tracing.js --import ./dist/observability/apm-register.js dist/index.js",
     "db:migrate": "tsx src/db/migrate.ts",
     "db:migrate:dry-run": "tsx src/db/migrate.ts -- --dry-run",
     "db:migrate:rollback": "tsx src/db/migrate.ts -- --rollback",
